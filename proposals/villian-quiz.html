@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Villain Personality Profiler</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 40px;
+            max-width: 900px;
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        table, th, td {
+            border: 1px solid #aaa;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        ul {
+            margin-left: 20px;
+        }
+        .placeholder {
+            border: 2px dashed #666;
+            padding: 20px;
+            margin: 20px 0;
+            text-align: center;
+            color: #666;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Villain Personality Profiler</h1>
+
+    <p><strong>Villain Personality Profiler</strong> (working title)</p>
+
+    <h2>Description</h2>
+    <p>
+        An interactive personality-style quiz that determines what kind of villain a user is. 
+        Users answer scenario-based questions, and the system generates a villain archetype 
+        complete with traits, strengths, weaknesses, and a dramatic villain persona.
+    </p>
+
+    <p>
+        The Villain Personality Profiler is designed as an interactive, story-driven quiz 
+        that reveals what kind of villain a user would be. The experience blends humour, 
+        personality style assessment, and dramatic flair. Users progress through a series 
+        of scenario based questions that explore motivations, decision making tendencies, 
+        and moral flexibility.
+    </p>
+
+    <p>
+        Based on the user's responses, the system assigns a villain archetype such as 
+        <em>The Mastermind</em>, <em>The Chaos Bringer</em>, or <em>The Shadow Manipulator</em>. 
+        Each archetype includes a detailed profile describing personality traits, strengths, 
+        weaknesses, and a thematic villain backstory. The goal is to create an engaging, 
+        playful experience that feels personalised and entertaining.
+    </p>
+
+    <p>
+        The application may also include an administrator interface that allows team members 
+        to manage quiz content. Administrators could add or edit questions, create new villain 
+        archetypes, and review analytics such as which villain types are most commonly assigned. 
+        This ensures the quiz can evolve over time and remain fresh for returning users.
+    </p>
+
+    <h2>Possible Application Names</h2>
+    <ul>
+        <li>Villain Personality Profiler</li>
+        <li>What Kind of Villain Are You</li>
+        <li>VillainVerse Quiz</li>
+    </ul>
+
+    <h2>User Types and Capabilities</h2>
+
+    <h3>General Users</h3>
+    <ul>
+        <li>Take the villain quiz</li>
+        <li>View their villain profile</li>
+        <li>Share results</li>
+        <li>Retake the quiz</li>
+    </ul>
+
+    <h3>Administrators</h3>
+    <ul>
+        <li>Add, edit, or remove quiz questions</li>
+        <li>Create or modify villain archetypes</li>
+        <li>Manage user submissions or analytics</li>
+        <li>Approve new content before it goes live</li>
+    </ul>
+
+    <h2>User Requirements (User Stories)</h2>
+    <ul>
+        <li>As a user, I want to answer a series of questions so I can discover my villain type.</li>
+        <li>As a user, I want my results to feel personalised so the experience feels unique.</li>
+        <li>As a user, I want to share my villain profile so my friends can compare results.</li>
+        <li>As an admin, I want to add new questions so the quiz stays fresh.</li>
+        <li>As an admin, I want to edit villain archetypes so I can refine the system over time.</li>
+        <li>As an admin, I want to view analytics so I can see which villain types are most popular.</li>
+    </ul>
+
+    <h2>Database Structure Ideas</h2>
+
+    <table>
+        <tr>
+            <th>Table</th>
+            <th>Purpose</th>
+            <th>Key Fields</th>
+        </tr>
+        <tr>
+            <td>users</td>
+            <td>Store user accounts (optional)</td>
+            <td>id, username, email, created_at</td>
+        </tr>
+        <tr>
+            <td>questions</td>
+            <td>Quiz questions</td>
+            <td>id, question_text, category</td>
+        </tr>
+        <tr>
+            <td>answers</td>
+            <td>Possible answers to each question</td>
+            <td>id, question_id, answer_text, score_value, villain_trait</td>
+        </tr>
+        <tr>
+            <td>villain_types</td>
+            <td>Archetypes and descriptions</td>
+            <td>id, name, description, strengths, weaknesses</td>
+        </tr>
+        <tr>
+            <td>results</td>
+            <td>Stores user quiz outcomes</td>
+            <td>id, user_id, villain_type_id, timestamp</td>
+        </tr>
+    </table>
+
+    <h2>Relevant Links</h2>
+    <ul>
+        <li>BuzzFeed Quiz Inspiration - https://www.buzzfeed.com/quizzes</li>
+        <li>ProProfs Quiz Inspiration - https://www.proprofs.com/quiz-school/story.php?title=what-kind-of-villain-are-you</li>
+        <li>WikiHow Quiz Inspiration - https://www.wikihow.com/My-Villain-Character</li>
+    </ul>
+
+    <h2>Images / Inspiration</h2>
+    <div style="text-align: center;">
+        <img src="../Images/WhatTypeOfVillianAreYou.jpg" alt="Villain inspiration image" style="max-width:100%;">
+    </div>
+
+    <h2>Biggest Challenges</h2>
+    <ul>
+        <li>Designing a scoring system that feels accurate and fun</li>
+        <li>Creating enough villain archetypes to keep results varied</li>
+        <li>Ensuring the quiz feels engaging rather than repetitive</li>
+        <li>Building an admin interface that is simple but flexible</li>
+        <li>Making the results visually appealing and shareable</li>
+    </ul>
+
+    <h2>Data Requirements</h2>
+    <ul>
+        <li>A set of quiz questions and answer options</li>
+        <li>A defined list of villain archetypes</li>
+        <li>Mapping logic between answers and villain types</li>
+        <li>Optional: user accounts if storing long term data</li>
+    </ul>
+
+</body>
+</html>
